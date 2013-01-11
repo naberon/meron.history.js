@@ -14,7 +14,7 @@ if (typeof meron === 'object') {
         var categories = 'History';
         var actions = '['+ meron.currentSessionDate() +'] userID:'+ meron.visitorId() +'('+ ("000" +meron.visits()).slice(-4) +'visits)';
         var labels = '['+ meron.getDate() +'] '+ window.location.pathname;
-        var method = (typeof tracker === 'string') ? tracker +'._trackEvent' : '._trackEvent';
+        var method = (typeof tracker === 'string') ? tracker +'._trackEvent' : '_trackEvent';
         _gaq.push([method, categories, actions, labels, 1, true]);
       }
     };
